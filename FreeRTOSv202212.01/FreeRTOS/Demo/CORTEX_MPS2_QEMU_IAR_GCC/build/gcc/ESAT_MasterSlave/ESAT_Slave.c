@@ -11,6 +11,7 @@
 #include <time.h>
 #include "ESAT_Slave.h"
 
+#define ESAT_SLAVE_DIVIDER                  20U
 #define ESAT_SLAVE_DECREMENT_OP_CONSTANT	10000U
 
 static enum en_SlaveStates SlaveState = S_INIT;
@@ -33,24 +34,24 @@ static uint32_t ESAT_Error = ESAT_S_OK;
 static enum en_SlaveStates ESAT_StateDecision(uint32_t Condition)
 {
 	enum en_SlaveStates lState = S_INIT;
-
 	uint32_t randValue;
 
 	if(S_INIT != SlaveState)
 	{
 		srand(Condition);
-		randValue = rand()%20;
-		if( 2u <= randValue)
+		randValue = rand() % ESAT_SLAVE_DIVIDER;
+
+		if( 5U == randValue)
 		{
-			lState = ACTIVE;
+			lState = SLEEP;
 		}
-		else if (0u == randValue)
+		else if (0U == randValue)
 		{
 			lState = FAULT;
 		}
 		else
 		{
-			lState = SLEEP;
+			lState = ACTIVE;
 		}
 	}
 
@@ -96,7 +97,7 @@ static uint32_t ESAT_DoOperation(void* Op)
 	{
 		if(ESAT_SLAVE_DECREMENT_OP_CONSTANT <= (*((uint32_t*)Op)))
 		{
-			lResult = (*((uint32_t*)Op) - (*((uint32_t*)Op) >> 2U));
+			lResult = (*((uint32_t*)Op) - (*((uint32_t*)Op) >> 4U));
 		}
 		else
 		{
@@ -138,6 +139,10 @@ uint8_t ESAT_SlaveOperation(struct s_MasterRequestData* ReqOp, void* Op)
 		else if(REQUEST_ERROR == ReqOp->en_requestStatus)
 		{
 			ReqOp->u32_operationResult = ESAT_Error;
+		}
+		else if(REQUEST_TGT_RESET == ReqOp->en_requestStatus)
+		{
+			ReqOp->en_slaveStatus = S_INIT;
 		}
 		else
 		{

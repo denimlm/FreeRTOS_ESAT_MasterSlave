@@ -8,7 +8,7 @@
 /* Standard includes. */
 #include <stdio.h>
 #include "ESAT_Slave.h"
-
+#define ESAT_MASTER_DIVIDER	    20U
 enum en_MasterStates  MasterState = M_INIT;
 
 /****************************************************************************/
@@ -25,17 +25,17 @@ enum en_MasterStates  MasterState = M_INIT;
 
  */
 /****************************************************************************/
-enum en_MasterStates ESAT_MasterTrigger(uint32_t u32_Source)
+static enum en_MasterStates ESAT_MasterTrigger(const uint32_t u32_Source)
 {
 	enum en_MasterStates lReturn = M_INIT;
 
-	if(2u <= (u32_Source % 10))
+	if(0U == (u32_Source % ESAT_MASTER_DIVIDER))
 	{
-		lReturn = PROCESSING;
+		lReturn = IDLE;
 	}
 	else
 	{
-		lReturn = IDLE;
+		lReturn = PROCESSING;
 	}
 	return lReturn;
 }
@@ -60,21 +60,28 @@ static enum en_MasterStates ESAT_MasterRespond(struct s_MasterRequestData* s_Res
 
 	if(NULL != s_Response)
 	{
-		if(FAULT == s_Response->en_slaveStatus)
+		if(S_INIT == s_Response->en_slaveStatus)
 		{
-			s_Response->en_requestStatus = REQUEST_ERROR;
-
-			if(0u != s_Response->u32_operationResult)
+			if(REQUEST_TGT_RESET == s_Response->en_requestStatus)
 			{
-				printf( "ESAT_Master report Slave ERROR ID: %d \r\n", s_Response->u32_operationResult );
-				s_Response->u32_operationResult = 0u;
-				s_Response->en_requestStatus = REQUEST_STATUS;
+				printf( "ESAT_Master report Slave reset (INIT) \r\n" );
+				en_UpdateStatus = ERROR;
+				s_Response->en_requestStatus = REQUEST_ERROR;
 			}
+			else
+			{
+				en_UpdateStatus = PROCESSING;
+			}
+		}
+		else if(FAULT == s_Response->en_slaveStatus)
+		{
+			s_Response->en_requestStatus = REQUEST_TGT_RESET;
+
 			en_UpdateStatus = ERROR;
 		}
 		else if(ACTIVE == s_Response->en_slaveStatus)
 		{
-			printf( "ESAT_Master report SLAVE is in ACTIVE state \r\n" );
+			printf( "ESAT_Master report Slave is ACTIVE \r\n" );
 			if(REQUEST_OP_RESULT == s_Response->en_requestStatus)
 			{
 				printf( "ESAT_Master report SLAVE operation RESULT= %d \r\n", s_Response->u32_operationResult );
@@ -91,6 +98,11 @@ static enum en_MasterStates ESAT_MasterRespond(struct s_MasterRequestData* s_Res
 		else if(SLEEP == s_Response->en_slaveStatus)
 		{
 			printf( "ESAT_Master report SLAVE is in SLEEP state \r\n" );
+			s_Response->en_requestStatus = REQUEST_STATUS;
+		}
+		else
+		{
+			//Do nothing
 		}
 	}
 
@@ -128,9 +140,20 @@ static enum en_MasterStates ESAT_MasterSM(struct s_MasterRequestData* s_SlaveRes
 
 		case ERROR:
 			printf( "ESAT_Master report ERROR on Slave site \r\n" );
-			if( REQUEST_ERROR != s_SlaveResponse->en_requestStatus)
+
+			if( REQUEST_TGT_RESET == s_SlaveResponse->en_requestStatus)
 			{
-				MasterState = PROCESSING;
+				MasterState = ERROR;
+			}
+			else if(REQUEST_ERROR == s_SlaveResponse->en_requestStatus)
+			{
+				if(0u != s_SlaveResponse->u32_operationResult)
+				{
+					printf( "ESAT_Master report Slave ERROR ID: %d \r\n", s_SlaveResponse->u32_operationResult );
+					s_SlaveResponse->en_requestStatus = REQUEST_STATUS;
+					s_SlaveResponse->u32_operationResult = 0u;
+					MasterState = PROCESSING;
+				}
 			}
 		break;
 
