@@ -10,7 +10,7 @@ date
 
 # Argument validation check
 if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <run/debug> "
+    echo "Usage: $0 <run/debug/help> "
     exit 1
 fi
 
@@ -19,6 +19,18 @@ if [ "$1" == "debug" ]; then
     echo "#####################################"
     echo "QEMU: witing for debugger connection"
     ${PWD}/Tools/MinGW/qemu/qemu-system-arm -machine mps2-an385 -cpu cortex-m3 -kernel ${PWD}/FreeRTOSv202212.01/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/output/RTOSDemo.out -monitor none -nographic -serial stdio -s -S
+elif [ "$1" == "help" ]; then
+    echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    echo "Use Git Bash for best results"
+    echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+    echo "Use following parameter with StartDemo bash script"
+    echo "StartDemo [parameter] "
+    echo "Ex: ./StartDemo run"
+    echo "####################################################"
+    echo "[parameter]"
+    echo "run   - only run program in current console"
+    echo "debug - activate program and wait for connection with debugger"
+    echo "help  - show this help menu."
 else
     echo "#####################################"
     echo "QEMU: Simply start program Master/Slave"
