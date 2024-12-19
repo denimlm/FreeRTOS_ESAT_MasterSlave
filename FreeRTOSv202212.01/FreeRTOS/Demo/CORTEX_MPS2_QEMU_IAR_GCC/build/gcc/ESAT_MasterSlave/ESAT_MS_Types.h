@@ -37,13 +37,6 @@ enum en_MasterSync
 	REQUEST_ERROR
 };
 
-enum en_SlaveOperations
-{
-	GET_STATUS = 10,
-	GET_OP_RESULT,
-	GET_ERROR
-};
-
 struct s_MasterRequestData
 {
 	enum en_MasterSync en_requestStatus;

@@ -2,7 +2,7 @@
  * ESAT_Slave.h
  *
  *  Created on: 16.12.2024 г.
- *      Author: MLM1SF
+ *      Author: Mladen Mladenov
  */
 
 #ifndef ESAT_MASTERSLAVE_ESAT_SLAVE_H_
