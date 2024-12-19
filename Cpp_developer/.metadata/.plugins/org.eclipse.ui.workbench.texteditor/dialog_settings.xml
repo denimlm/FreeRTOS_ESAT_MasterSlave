@@ -3,6 +3,7 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="IDLE"/>
 		<item value="xQueue"/>
 		<item value="DEMO_PROJECT"/>
 		<item value="mainCREATE_SIMPLE_BLINKY_DEMO_ONLY "/>
