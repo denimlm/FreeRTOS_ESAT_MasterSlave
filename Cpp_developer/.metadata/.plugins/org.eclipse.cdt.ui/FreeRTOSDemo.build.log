@@ -1,6 +1,6 @@
-11:37:43 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+12:14:01 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
 make -j22 all 
 make: Nothing to be done for `all'.
 
-11:37:49 Build Finished. 0 errors, 0 warnings. (took 6s.697ms)
+12:14:08 Build Finished. 0 errors, 0 warnings. (took 6s.824ms)
 
