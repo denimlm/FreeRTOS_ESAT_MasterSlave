@@ -3,6 +3,8 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="main"/>
+		<item value="blinky"/>
 		<item value="IDLE"/>
 		<item value="xQueue"/>
 		<item value="DEMO_PROJECT"/>

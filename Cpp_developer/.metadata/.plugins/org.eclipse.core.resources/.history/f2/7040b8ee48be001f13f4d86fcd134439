@@ -33,7 +33,7 @@
  * and a more comprehensive test and demo application.  The
  * mainCREATE_SIMPLE_BLINKY_DEMO_ONLY constant, defined in this file, is used to
  * select between the two.  The simply blinky demo is implemented and described
- * in main_esatms.c.  The more comprehensive test and demo application is
+ * in main_blinky.c.  The more comprehensive test and demo application is
  * implemented and described in main_full.c.
  *
  * This file implements the code that is not demo specific, including the
@@ -76,10 +76,10 @@ required UART registers. */
 #define TX_BUFFER_MASK	( 1UL )
 
 /*
- * main_esatms() is used when mainCREATE_SIMPLE_BLINKY_DEMO_ONLY is set to 1.
+ * main_blinky() is used when mainCREATE_SIMPLE_BLINKY_DEMO_ONLY is set to 1.
  * main_full() is used when mainCREATE_SIMPLE_BLINKY_DEMO_ONLY is set to 0.
  */
-extern void main_esatms( void );
+extern void main_blinky( void );
 extern void main_full( void );
 
 /*
