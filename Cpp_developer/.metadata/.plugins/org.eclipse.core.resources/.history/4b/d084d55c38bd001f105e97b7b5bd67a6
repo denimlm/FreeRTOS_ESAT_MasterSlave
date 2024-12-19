@@ -1,0 +1,16 @@
+/*
+ * ESAT_Master.h
+ *
+ *  Created on: 16.12.2024 г.
+ *      Author: MLM1SF
+ */
+
+#ifndef ESAT_MASTERSLAVE_ESAT_MASTER_H_
+#define ESAT_MASTERSLAVE_ESAT_MASTER_H_
+
+#include "ESAT_MS_Types.h"
+
+enum en_MasterSync ESAT_Master(uint32_t Trigger, struct s_MasterRequestData* s_SlaveResponse);
+
+
+#endif /* ESAT_MASTERSLAVE_ESAT_MASTER_H_ */

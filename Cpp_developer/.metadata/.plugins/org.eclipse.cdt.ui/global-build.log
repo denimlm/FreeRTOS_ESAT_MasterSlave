@@ -1,0 +1,395 @@
+11:26:08 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/ESAT_Slave.d" -MT output/ESAT_Slave.o -c ./ESAT_MasterSlave/ESAT_Slave.c -o output/ESAT_Slave.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/main_blinky.d" -MT output/main_blinky.o -c ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c -o output/main_blinky.o
+./ESAT_MasterSlave/ESAT_Slave.c: In function 'ESAT_SlaveOperation':
+./ESAT_MasterSlave/ESAT_Slave.c:62:17: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   62 |  if( GET_STATUS == ReqOp->en_requestStatus)
+      |                 ^~
+./ESAT_MasterSlave/ESAT_Slave.c:66:24: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   66 |  else if(GET_OP_RESULT == ReqOp->en_requestStatus)
+      |                        ^~
+./ESAT_MasterSlave/ESAT_Slave.c:70:20: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   70 |  else if(GET_ERROR == ReqOp->en_requestStatus)
+      |                    ^~
+./ESAT_MasterSlave/ESAT_Slave.c: In function 'ESAT_Slave':
+./ESAT_MasterSlave/ESAT_Slave.c:96:34: error: incompatible type for argument 1 of 'ESAT_SlaveOperation'
+   96 |   u8_reVal = ESAT_SlaveOperation((enum en_SlaveOperations)s_RequestOp->en_requestStatus, (void*)&Trigger);
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                  |
+      |                                  enum en_SlaveOperations
+./ESAT_MasterSlave/ESAT_Slave.c:58:57: note: expected 'struct s_MasterRequestData *' but argument is of type 'enum en_SlaveOperations'
+   58 | uint8_t ESAT_SlaveOperation(struct s_MasterRequestData* ReqOp, void* Op)
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+make: *** [output/ESAT_Slave.o] Error 1
+make: *** Waiting for unfinished jobs....
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c: In function 'prvQueueReceiveTask':
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:258:4: error: 'ulValueToSend' undeclared (first use in this function); did you mean 'ulValueToSendReceive'?
+  258 |    ulValueToSend = ESAT_Slave(messageCount, ulValueToSendReceive);
+      |    ^~~~~~~~~~~~~
+      |    ulValueToSendReceive
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:258:4: note: each undeclared identifier is reported only once for each function it appears in
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:258:45: error: incompatible type for argument 2 of 'ESAT_Slave'
+  258 |    ulValueToSend = ESAT_Slave(messageCount, ulValueToSendReceive);
+      |                                             ^~~~~~~~~~~~~~~~~~~~
+      |                                             |
+      |                                             struct s_MasterRequestData
+In file included from ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:72:
+./ESAT_MasterSlave/ESAT_Slave.h:13:66: note: expected 'struct s_MasterRequestData *' but argument is of type 'struct s_MasterRequestData'
+   13 | uint8_t ESAT_Slave(uint32_t Trigger, struct s_MasterRequestData* s_RequestOp);
+      |                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:226:21: warning: unused variable 'ulReceivedValue' [-Wunused-variable]
+  226 |  enum en_MasterSync ulReceivedValue = REQUEST_STATUS;
+      |                     ^~~~~~~~~~~~~~~
+make: *** [output/main_blinky.o] Error 1
+"make -j22 all" terminated with exit code 2. Build might be incomplete.
+11:29:11 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/ESAT_Slave.d" -MT output/ESAT_Slave.o -c ./ESAT_MasterSlave/ESAT_Slave.c -o output/ESAT_Slave.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/main_blinky.d" -MT output/main_blinky.o -c ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c -o output/main_blinky.o
+./ESAT_MasterSlave/ESAT_Slave.c: In function 'ESAT_SlaveOperation':
+./ESAT_MasterSlave/ESAT_Slave.c:62:17: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   62 |  if( GET_STATUS == ReqOp->en_requestStatus)
+      |                 ^~
+./ESAT_MasterSlave/ESAT_Slave.c:66:24: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   66 |  else if(GET_OP_RESULT == ReqOp->en_requestStatus)
+      |                        ^~
+./ESAT_MasterSlave/ESAT_Slave.c:70:20: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   70 |  else if(GET_ERROR == ReqOp->en_requestStatus)
+      |                    ^~
+./ESAT_MasterSlave/ESAT_Slave.c: In function 'ESAT_Slave':
+./ESAT_MasterSlave/ESAT_Slave.c:96:46: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+   96 |   u8_reVal = ESAT_SlaveOperation((s_RequestOp, (void*)&Trigger);
+      |                                              ^
+./ESAT_MasterSlave/ESAT_Slave.c:96:64: error: expected ')' before ';' token
+   96 |   u8_reVal = ESAT_SlaveOperation((s_RequestOp, (void*)&Trigger);
+      |                                                                ^
+      |                                                                )
+./ESAT_MasterSlave/ESAT_Slave.c:96:14: error: too few arguments to function 'ESAT_SlaveOperation'
+   96 |   u8_reVal = ESAT_SlaveOperation((s_RequestOp, (void*)&Trigger);
+      |              ^~~~~~~~~~~~~~~~~~~
+./ESAT_MasterSlave/ESAT_Slave.c:58:9: note: declared here
+   58 | uint8_t ESAT_SlaveOperation(struct s_MasterRequestData* ReqOp, void* Op)
+      |         ^~~~~~~~~~~~~~~~~~~
+./ESAT_MasterSlave/ESAT_Slave.c:114:8: error: expected ';' before '}' token
+  114 |  break;
+      |        ^
+      |        ;
+  115 |  }
+      |  ~      
+./ESAT_MasterSlave/ESAT_Slave.c:93:2: warning: enumeration value 'S_INIT' not handled in switch [-Wswitch]
+   93 |  switch(SlaveState)
+      |  ^~~~~~
+./ESAT_MasterSlave/ESAT_Slave.c:93:2: warning: enumeration value 'SLEEP' not handled in switch [-Wswitch]
+./ESAT_MasterSlave/ESAT_Slave.c:93:2: warning: enumeration value 'FAULT' not handled in switch [-Wswitch]
+make: *** [output/ESAT_Slave.o] Error 1
+make: *** Waiting for unfinished jobs....
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c: In function 'prvQueueReceiveTask':
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:257:4: error: 'ulValueToSend' undeclared (first use in this function); did you mean 'ulValueToSendReceive'?
+  257 |    ulValueToSend = ESAT_Slave(messageCount, ulValueToSendReceive);
+      |    ^~~~~~~~~~~~~
+      |    ulValueToSendReceive
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:257:4: note: each undeclared identifier is reported only once for each function it appears in
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:257:45: error: incompatible type for argument 2 of 'ESAT_Slave'
+  257 |    ulValueToSend = ESAT_Slave(messageCount, ulValueToSendReceive);
+      |                                             ^~~~~~~~~~~~~~~~~~~~
+      |                                             |
+      |                                             struct s_MasterRequestData
+In file included from ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:72:
+./ESAT_MasterSlave/ESAT_Slave.h:13:66: note: expected 'struct s_MasterRequestData *' but argument is of type 'struct s_MasterRequestData'
+   13 | uint8_t ESAT_Slave(uint32_t Trigger, struct s_MasterRequestData* s_RequestOp);
+      |                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+make: *** [output/main_blinky.o] Error 1
+"make -j22 all" terminated with exit code 2. Build might be incomplete.
+11:29:46 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/ESAT_Slave.d" -MT output/ESAT_Slave.o -c ./ESAT_MasterSlave/ESAT_Slave.c -o output/ESAT_Slave.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/main_blinky.d" -MT output/main_blinky.o -c ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c -o output/main_blinky.o
+./ESAT_MasterSlave/ESAT_Slave.c: In function 'ESAT_SlaveOperation':
+./ESAT_MasterSlave/ESAT_Slave.c:62:17: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   62 |  if( GET_STATUS == ReqOp->en_requestStatus)
+      |                 ^~
+./ESAT_MasterSlave/ESAT_Slave.c:66:24: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   66 |  else if(GET_OP_RESULT == ReqOp->en_requestStatus)
+      |                        ^~
+./ESAT_MasterSlave/ESAT_Slave.c:70:20: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   70 |  else if(GET_ERROR == ReqOp->en_requestStatus)
+      |                    ^~
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c: In function 'prvQueueReceiveTask':
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:257:4: error: 'ulValueToSend' undeclared (first use in this function); did you mean 'ulValueToSendReceive'?
+  257 |    ulValueToSend = ESAT_Slave(messageCount, ulValueToSendReceive);
+      |    ^~~~~~~~~~~~~
+      |    ulValueToSendReceive
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:257:4: note: each undeclared identifier is reported only once for each function it appears in
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:257:45: error: incompatible type for argument 2 of 'ESAT_Slave'
+  257 |    ulValueToSend = ESAT_Slave(messageCount, ulValueToSendReceive);
+      |                                             ^~~~~~~~~~~~~~~~~~~~
+      |                                             |
+      |                                             struct s_MasterRequestData
+In file included from ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:72:
+./ESAT_MasterSlave/ESAT_Slave.h:13:66: note: expected 'struct s_MasterRequestData *' but argument is of type 'struct s_MasterRequestData'
+   13 | uint8_t ESAT_Slave(uint32_t Trigger, struct s_MasterRequestData* s_RequestOp);
+      |                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+make: *** [output/main_blinky.o] Error 1
+"make -j22 all" terminated with exit code 2. Build might be incomplete.
+11:30:53 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/main_blinky.d" -MT output/main_blinky.o -c ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c -o output/main_blinky.o
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c: In function 'prvQueueReceiveTask':
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:257:36: error: incompatible type for argument 2 of 'ESAT_Slave'
+  257 |    (void) ESAT_Slave(messageCount, ulValueToSendReceive);
+      |                                    ^~~~~~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    struct s_MasterRequestData
+In file included from ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:72:
+./ESAT_MasterSlave/ESAT_Slave.h:13:66: note: expected 'struct s_MasterRequestData *' but argument is of type 'struct s_MasterRequestData'
+   13 | uint8_t ESAT_Slave(uint32_t Trigger, struct s_MasterRequestData* s_RequestOp);
+      |                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+make: *** [output/main_blinky.o] Error 1
+"make -j22 all" terminated with exit code 2. Build might be incomplete.
+11:31:42 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/main_blinky.d" -MT output/main_blinky.o -c ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c -o output/main_blinky.o
+
+
+--- Final linking ---
+
+arm-none-eabi-gcc ./output/tasks.o ./output/list.o ./output/queue.o ./output/timers.o ./output/event_groups.o ./output/stream_buffer.o ./output/heap_4.o ./output/port.o ./output/AbortDelay.o ./output/BlockQ.o ./output/blocktim.o ./output/countsem.o ./output/death.o ./output/dynamic.o ./output/EventGroupsDemo.o ./output/GenQTest.o ./output/integer.o ./output/IntQueue.o ./output/IntQueueTimer.o ./output/IntSemTest.o ./output/MessageBufferAMP.o ./output/MessageBufferDemo.o ./output/PollQ.o ./output/QPeek.o ./output/QueueOverwrite.o ./output/QueueSet.o ./output/QueueSetPolling.o ./output/recmutex.o ./output/semtest.o ./output/StaticAllocation.o ./output/StreamBufferDemo.o ./output/StreamBufferInterrupt.o ./output/TaskNotify.o ./output/TaskNotifyArray.o ./output/TimerDemo.o ./output/ESAT_Master.o ./output/ESAT_Slave.o ./output/main.o ./output/main_blinky.o ./output/main_full.o ./output/startup_gcc.o ./output/printf-stdarg.o -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/RTOSDemo.out" -MT output/RTOSDemo.out -Xlinker --wrap=malloc -Xlinker --gc-sections -Xlinker -T ./mps2_m3.ld \
+		-Xlinker -Map=./output/RTOSDemo.map -specs=nano.specs \
+		-specs=nosys.specs -specs=rdimon.specs -o ./output/RTOSDemo.out
+arm-none-eabi-size ./output/RTOSDemo.out		
+   text	   data	    bss	    dec	    hex	filename
+  22588	    244	  65198	  88030	  157de	./output/RTOSDemo.out
+11:32:06 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+make: Nothing to be done for `all'.
+11:37:57 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/main_blinky.d" -MT output/main_blinky.o -c ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c -o output/main_blinky.o
+
+
+--- Final linking ---
+
+arm-none-eabi-gcc ./output/tasks.o ./output/list.o ./output/queue.o ./output/timers.o ./output/event_groups.o ./output/stream_buffer.o ./output/heap_4.o ./output/port.o ./output/AbortDelay.o ./output/BlockQ.o ./output/blocktim.o ./output/countsem.o ./output/death.o ./output/dynamic.o ./output/EventGroupsDemo.o ./output/GenQTest.o ./output/integer.o ./output/IntQueue.o ./output/IntQueueTimer.o ./output/IntSemTest.o ./output/MessageBufferAMP.o ./output/MessageBufferDemo.o ./output/PollQ.o ./output/QPeek.o ./output/QueueOverwrite.o ./output/QueueSet.o ./output/QueueSetPolling.o ./output/recmutex.o ./output/semtest.o ./output/StaticAllocation.o ./output/StreamBufferDemo.o ./output/StreamBufferInterrupt.o ./output/TaskNotify.o ./output/TaskNotifyArray.o ./output/TimerDemo.o ./output/ESAT_Master.o ./output/ESAT_Slave.o ./output/main.o ./output/main_blinky.o ./output/main_full.o ./output/startup_gcc.o ./output/printf-stdarg.o -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/RTOSDemo.out" -MT output/RTOSDemo.out -Xlinker --wrap=malloc -Xlinker --gc-sections -Xlinker -T ./mps2_m3.ld \
+		-Xlinker -Map=./output/RTOSDemo.map -specs=nano.specs \
+		-specs=nosys.specs -specs=rdimon.specs -o ./output/RTOSDemo.out
+arm-none-eabi-size ./output/RTOSDemo.out		
+   text	   data	    bss	    dec	    hex	filename
+  22588	    244	  65198	  88030	  157de	./output/RTOSDemo.out
+11:48:03 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/ESAT_Master.d" -MT output/ESAT_Master.o -c ./ESAT_MasterSlave/ESAT_Master.c -o output/ESAT_Master.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/ESAT_Slave.d" -MT output/ESAT_Slave.o -c ./ESAT_MasterSlave/ESAT_Slave.c -o output/ESAT_Slave.o
+./ESAT_MasterSlave/ESAT_Master.c: In function 'ESAT_Master':
+./ESAT_MasterSlave/ESAT_Master.c:113:50: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  113 |     printf( "ESAT_Master report SLAVE ERROR ID: %d \r\n", s_SlaveResponse->u32_operationResult );
+      |                                                 ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                  |                       |
+      |                                                  int                     uint32_t {aka long unsigned int}
+      |                                                 %ld
+./ESAT_MasterSlave/ESAT_Slave.c: In function 'ESAT_SlaveOperation':
+./ESAT_MasterSlave/ESAT_Slave.c:62:17: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   62 |  if( GET_STATUS == ReqOp->en_requestStatus)
+      |                 ^~
+./ESAT_MasterSlave/ESAT_Slave.c:66:24: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   66 |  else if(GET_OP_RESULT == ReqOp->en_requestStatus)
+      |                        ^~
+./ESAT_MasterSlave/ESAT_Slave.c:70:20: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   70 |  else if(GET_ERROR == ReqOp->en_requestStatus)
+      |                    ^~
+
+
+--- Final linking ---
+
+arm-none-eabi-gcc ./output/tasks.o ./output/list.o ./output/queue.o ./output/timers.o ./output/event_groups.o ./output/stream_buffer.o ./output/heap_4.o ./output/port.o ./output/AbortDelay.o ./output/BlockQ.o ./output/blocktim.o ./output/countsem.o ./output/death.o ./output/dynamic.o ./output/EventGroupsDemo.o ./output/GenQTest.o ./output/integer.o ./output/IntQueue.o ./output/IntQueueTimer.o ./output/IntSemTest.o ./output/MessageBufferAMP.o ./output/MessageBufferDemo.o ./output/PollQ.o ./output/QPeek.o ./output/QueueOverwrite.o ./output/QueueSet.o ./output/QueueSetPolling.o ./output/recmutex.o ./output/semtest.o ./output/StaticAllocation.o ./output/StreamBufferDemo.o ./output/StreamBufferInterrupt.o ./output/TaskNotify.o ./output/TaskNotifyArray.o ./output/TimerDemo.o ./output/ESAT_Master.o ./output/ESAT_Slave.o ./output/main.o ./output/main_blinky.o ./output/main_full.o ./output/startup_gcc.o ./output/printf-stdarg.o -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/RTOSDemo.out" -MT output/RTOSDemo.out -Xlinker --wrap=malloc -Xlinker --gc-sections -Xlinker -T ./mps2_m3.ld \
+		-Xlinker -Map=./output/RTOSDemo.map -specs=nano.specs \
+		-specs=nosys.specs -specs=rdimon.specs -o ./output/RTOSDemo.out
+arm-none-eabi-size ./output/RTOSDemo.out		
+   text	   data	    bss	    dec	    hex	filename
+  22612	    244	  65198	  88054	  157f6	./output/RTOSDemo.out
+11:48:25 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+make: Nothing to be done for `all'.
+11:50:14 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/ESAT_Slave.d" -MT output/ESAT_Slave.o -c ./ESAT_MasterSlave/ESAT_Slave.c -o output/ESAT_Slave.o
+./ESAT_MasterSlave/ESAT_Slave.c: In function 'ESAT_SlaveOperation':
+./ESAT_MasterSlave/ESAT_Slave.c:62:17: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   62 |  if( GET_STATUS == ReqOp->en_requestStatus)
+      |                 ^~
+./ESAT_MasterSlave/ESAT_Slave.c:66:24: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   66 |  else if(GET_OP_RESULT == ReqOp->en_requestStatus)
+      |                        ^~
+./ESAT_MasterSlave/ESAT_Slave.c:70:20: warning: comparison between 'enum en_SlaveOperations' and 'enum en_MasterSync' [-Wenum-compare]
+   70 |  else if(GET_ERROR == ReqOp->en_requestStatus)
+      |                    ^~
+
+
+--- Final linking ---
+
+arm-none-eabi-gcc ./output/tasks.o ./output/list.o ./output/queue.o ./output/timers.o ./output/event_groups.o ./output/stream_buffer.o ./output/heap_4.o ./output/port.o ./output/AbortDelay.o ./output/BlockQ.o ./output/blocktim.o ./output/countsem.o ./output/death.o ./output/dynamic.o ./output/EventGroupsDemo.o ./output/GenQTest.o ./output/integer.o ./output/IntQueue.o ./output/IntQueueTimer.o ./output/IntSemTest.o ./output/MessageBufferAMP.o ./output/MessageBufferDemo.o ./output/PollQ.o ./output/QPeek.o ./output/QueueOverwrite.o ./output/QueueSet.o ./output/QueueSetPolling.o ./output/recmutex.o ./output/semtest.o ./output/StaticAllocation.o ./output/StreamBufferDemo.o ./output/StreamBufferInterrupt.o ./output/TaskNotify.o ./output/TaskNotifyArray.o ./output/TimerDemo.o ./output/ESAT_Master.o ./output/ESAT_Slave.o ./output/main.o ./output/main_blinky.o ./output/main_full.o ./output/startup_gcc.o ./output/printf-stdarg.o -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/RTOSDemo.out" -MT output/RTOSDemo.out -Xlinker --wrap=malloc -Xlinker --gc-sections -Xlinker -T ./mps2_m3.ld \
+		-Xlinker -Map=./output/RTOSDemo.map -specs=nano.specs \
+		-specs=nosys.specs -specs=rdimon.specs -o ./output/RTOSDemo.out
+arm-none-eabi-size ./output/RTOSDemo.out		
+   text	   data	    bss	    dec	    hex	filename
+  22604	    244	  65198	  88046	  157ee	./output/RTOSDemo.out
+11:52:25 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+make: Nothing to be done for `all'.
+12:03:09 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/ESAT_Master.d" -MT output/ESAT_Master.o -c ./ESAT_MasterSlave/ESAT_Master.c -o output/ESAT_Master.o
+./ESAT_MasterSlave/ESAT_Master.c: In function 'ESAT_Master':
+./ESAT_MasterSlave/ESAT_Master.c:119:50: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  119 |     printf( "ESAT_Master report SLAVE ERROR ID: %d \r\n", s_SlaveResponse->u32_operationResult );
+      |                                                 ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                  |                       |
+      |                                                  int                     uint32_t {aka long unsigned int}
+      |                                                 %ld
+
+
+--- Final linking ---
+
+arm-none-eabi-gcc ./output/tasks.o ./output/list.o ./output/queue.o ./output/timers.o ./output/event_groups.o ./output/stream_buffer.o ./output/heap_4.o ./output/port.o ./output/AbortDelay.o ./output/BlockQ.o ./output/blocktim.o ./output/countsem.o ./output/death.o ./output/dynamic.o ./output/EventGroupsDemo.o ./output/GenQTest.o ./output/integer.o ./output/IntQueue.o ./output/IntQueueTimer.o ./output/IntSemTest.o ./output/MessageBufferAMP.o ./output/MessageBufferDemo.o ./output/PollQ.o ./output/QPeek.o ./output/QueueOverwrite.o ./output/QueueSet.o ./output/QueueSetPolling.o ./output/recmutex.o ./output/semtest.o ./output/StaticAllocation.o ./output/StreamBufferDemo.o ./output/StreamBufferInterrupt.o ./output/TaskNotify.o ./output/TaskNotifyArray.o ./output/TimerDemo.o ./output/ESAT_Master.o ./output/ESAT_Slave.o ./output/main.o ./output/main_blinky.o ./output/main_full.o ./output/startup_gcc.o ./output/printf-stdarg.o -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/RTOSDemo.out" -MT output/RTOSDemo.out -Xlinker --wrap=malloc -Xlinker --gc-sections -Xlinker -T ./mps2_m3.ld \
+		-Xlinker -Map=./output/RTOSDemo.map -specs=nano.specs \
+		-specs=nosys.specs -specs=rdimon.specs -o ./output/RTOSDemo.out
+arm-none-eabi-size ./output/RTOSDemo.out		
+   text	   data	    bss	    dec	    hex	filename
+  22668	    244	  65198	  88110	  1582e	./output/RTOSDemo.out
+12:06:19 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/ESAT_Master.d" -MT output/ESAT_Master.o -c ./ESAT_MasterSlave/ESAT_Master.c -o output/ESAT_Master.o
+./ESAT_MasterSlave/ESAT_Master.c: In function 'ESAT_Master':
+./ESAT_MasterSlave/ESAT_Master.c:115:50: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  115 |     printf( "ESAT_Master report SLAVE ERROR ID: %d \r\n", s_SlaveResponse->u32_operationResult );
+      |                                                 ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                  |                       |
+      |                                                  int                     uint32_t {aka long unsigned int}
+      |                                                 %ld
+
+
+--- Final linking ---
+
+arm-none-eabi-gcc ./output/tasks.o ./output/list.o ./output/queue.o ./output/timers.o ./output/event_groups.o ./output/stream_buffer.o ./output/heap_4.o ./output/port.o ./output/AbortDelay.o ./output/BlockQ.o ./output/blocktim.o ./output/countsem.o ./output/death.o ./output/dynamic.o ./output/EventGroupsDemo.o ./output/GenQTest.o ./output/integer.o ./output/IntQueue.o ./output/IntQueueTimer.o ./output/IntSemTest.o ./output/MessageBufferAMP.o ./output/MessageBufferDemo.o ./output/PollQ.o ./output/QPeek.o ./output/QueueOverwrite.o ./output/QueueSet.o ./output/QueueSetPolling.o ./output/recmutex.o ./output/semtest.o ./output/StaticAllocation.o ./output/StreamBufferDemo.o ./output/StreamBufferInterrupt.o ./output/TaskNotify.o ./output/TaskNotifyArray.o ./output/TimerDemo.o ./output/ESAT_Master.o ./output/ESAT_Slave.o ./output/main.o ./output/main_blinky.o ./output/main_full.o ./output/startup_gcc.o ./output/printf-stdarg.o -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/RTOSDemo.out" -MT output/RTOSDemo.out -Xlinker --wrap=malloc -Xlinker --gc-sections -Xlinker -T ./mps2_m3.ld \
+		-Xlinker -Map=./output/RTOSDemo.map -specs=nano.specs \
+		-specs=nosys.specs -specs=rdimon.specs -o ./output/RTOSDemo.out
+arm-none-eabi-size ./output/RTOSDemo.out		
+   text	   data	    bss	    dec	    hex	filename
+  22608	    244	  65198	  88050	  157f2	./output/RTOSDemo.out
+12:08:39 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/ESAT_Master.d" -MT output/ESAT_Master.o -c ./ESAT_MasterSlave/ESAT_Master.c -o output/ESAT_Master.o
+./ESAT_MasterSlave/ESAT_Master.c: In function 'ESAT_Master':
+./ESAT_MasterSlave/ESAT_Master.c:116:50: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  116 |     printf( "ESAT_Master report SLAVE ERROR ID: %d \r\n", s_SlaveResponse->u32_operationResult );
+      |                                                 ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                  |                       |
+      |                                                  int                     uint32_t {aka long unsigned int}
+      |                                                 %ld
+
+
+--- Final linking ---
+
+arm-none-eabi-gcc ./output/tasks.o ./output/list.o ./output/queue.o ./output/timers.o ./output/event_groups.o ./output/stream_buffer.o ./output/heap_4.o ./output/port.o ./output/AbortDelay.o ./output/BlockQ.o ./output/blocktim.o ./output/countsem.o ./output/death.o ./output/dynamic.o ./output/EventGroupsDemo.o ./output/GenQTest.o ./output/integer.o ./output/IntQueue.o ./output/IntQueueTimer.o ./output/IntSemTest.o ./output/MessageBufferAMP.o ./output/MessageBufferDemo.o ./output/PollQ.o ./output/QPeek.o ./output/QueueOverwrite.o ./output/QueueSet.o ./output/QueueSetPolling.o ./output/recmutex.o ./output/semtest.o ./output/StaticAllocation.o ./output/StreamBufferDemo.o ./output/StreamBufferInterrupt.o ./output/TaskNotify.o ./output/TaskNotifyArray.o ./output/TimerDemo.o ./output/ESAT_Master.o ./output/ESAT_Slave.o ./output/main.o ./output/main_blinky.o ./output/main_full.o ./output/startup_gcc.o ./output/printf-stdarg.o -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/RTOSDemo.out" -MT output/RTOSDemo.out -Xlinker --wrap=malloc -Xlinker --gc-sections -Xlinker -T ./mps2_m3.ld \
+		-Xlinker -Map=./output/RTOSDemo.map -specs=nano.specs \
+		-specs=nosys.specs -specs=rdimon.specs -o ./output/RTOSDemo.out
+arm-none-eabi-size ./output/RTOSDemo.out		
+   text	   data	    bss	    dec	    hex	filename
+  22616	    244	  65198	  88058	  157fa	./output/RTOSDemo.out
+12:12:02 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/tasks.d" -MT output/tasks.o -c ./../../../..//Source/tasks.c -o output/tasks.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/list.d" -MT output/list.o -c ./../../../..//Source/list.c -o output/list.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/queue.d" -MT output/queue.o -c ./../../../..//Source/queue.c -o output/queue.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/timers.d" -MT output/timers.o -c ./../../../..//Source/timers.c -o output/timers.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/event_groups.d" -MT output/event_groups.o -c ./../../../..//Source/event_groups.c -o output/event_groups.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/stream_buffer.d" -MT output/stream_buffer.o -c ./../../../..//Source/stream_buffer.c -o output/stream_buffer.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/heap_4.d" -MT output/heap_4.o -c ./../../../..//Source/portable/MemMang/heap_4.c -o output/heap_4.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/port.d" -MT output/port.o -c ./../../../..//Source/portable/GCC/ARM_CM3/port.c -o output/port.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/AbortDelay.d" -MT output/AbortDelay.o -c ./../../../..//Demo/Common/Minimal/AbortDelay.c -o output/AbortDelay.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/BlockQ.d" -MT output/BlockQ.o -c ./../../../..//Demo/Common/Minimal/BlockQ.c -o output/BlockQ.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/blocktim.d" -MT output/blocktim.o -c ./../../../..//Demo/Common/Minimal/blocktim.c -o output/blocktim.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/countsem.d" -MT output/countsem.o -c ./../../../..//Demo/Common/Minimal/countsem.c -o output/countsem.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/death.d" -MT output/death.o -c ./../../../..//Demo/Common/Minimal/death.c -o output/death.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/dynamic.d" -MT output/dynamic.o -c ./../../../..//Demo/Common/Minimal/dynamic.c -o output/dynamic.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/EventGroupsDemo.d" -MT output/EventGroupsDemo.o -c ./../../../..//Demo/Common/Minimal/EventGroupsDemo.c -o output/EventGroupsDemo.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/GenQTest.d" -MT output/GenQTest.o -c ./../../../..//Demo/Common/Minimal/GenQTest.c -o output/GenQTest.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/integer.d" -MT output/integer.o -c ./../../../..//Demo/Common/Minimal/integer.c -o output/integer.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/IntQueue.d" -MT output/IntQueue.o -c ./../../../..//Demo/Common/Minimal/IntQueue.c -o output/IntQueue.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/IntQueueTimer.d" -MT output/IntQueueTimer.o -c ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/IntQueueTimer.c -o output/IntQueueTimer.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/IntSemTest.d" -MT output/IntSemTest.o -c ./../../../..//Demo/Common/Minimal/IntSemTest.c -o output/IntSemTest.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/MessageBufferAMP.d" -MT output/MessageBufferAMP.o -c ./../../../..//Demo/Common/Minimal/MessageBufferAMP.c -o output/MessageBufferAMP.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/MessageBufferDemo.d" -MT output/MessageBufferDemo.o -c ./../../../..//Demo/Common/Minimal/MessageBufferDemo.c -o output/MessageBufferDemo.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/PollQ.d" -MT output/PollQ.o -c ./../../../..//Demo/Common/Minimal/PollQ.c -o output/PollQ.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/QPeek.d" -MT output/QPeek.o -c ./../../../..//Demo/Common/Minimal/QPeek.c -o output/QPeek.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/QueueOverwrite.d" -MT output/QueueOverwrite.o -c ./../../../..//Demo/Common/Minimal/QueueOverwrite.c -o output/QueueOverwrite.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/QueueSet.d" -MT output/QueueSet.o -c ./../../../..//Demo/Common/Minimal/QueueSet.c -o output/QueueSet.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/QueueSetPolling.d" -MT output/QueueSetPolling.o -c ./../../../..//Demo/Common/Minimal/QueueSetPolling.c -o output/QueueSetPolling.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/recmutex.d" -MT output/recmutex.o -c ./../../../..//Demo/Common/Minimal/recmutex.c -o output/recmutex.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/semtest.d" -MT output/semtest.o -c ./../../../..//Demo/Common/Minimal/semtest.c -o output/semtest.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/StaticAllocation.d" -MT output/StaticAllocation.o -c ./../../../..//Demo/Common/Minimal/StaticAllocation.c -o output/StaticAllocation.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/StreamBufferDemo.d" -MT output/StreamBufferDemo.o -c ./../../../..//Demo/Common/Minimal/StreamBufferDemo.c -o output/StreamBufferDemo.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/StreamBufferInterrupt.d" -MT output/StreamBufferInterrupt.o -c ./../../../..//Demo/Common/Minimal/StreamBufferInterrupt.c -o output/StreamBufferInterrupt.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/TaskNotify.d" -MT output/TaskNotify.o -c ./../../../..//Demo/Common/Minimal/TaskNotify.c -o output/TaskNotify.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/TaskNotifyArray.d" -MT output/TaskNotifyArray.o -c ./../../../..//Demo/Common/Minimal/TaskNotifyArray.c -o output/TaskNotifyArray.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/TimerDemo.d" -MT output/TimerDemo.o -c ./../../../..//Demo/Common/Minimal/TimerDemo.c -o output/TimerDemo.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/main.d" -MT output/main.o -c ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c -o output/main.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/main_blinky.d" -MT output/main_blinky.o -c ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c -o output/main_blinky.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/main_full.d" -MT output/main_full.o -c ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_full.c -o output/main_full.o
+
+
+--- Final linking ---
+
+arm-none-eabi-gcc ./output/tasks.o ./output/list.o ./output/queue.o ./output/timers.o ./output/event_groups.o ./output/stream_buffer.o ./output/heap_4.o ./output/port.o ./output/AbortDelay.o ./output/BlockQ.o ./output/blocktim.o ./output/countsem.o ./output/death.o ./output/dynamic.o ./output/EventGroupsDemo.o ./output/GenQTest.o ./output/integer.o ./output/IntQueue.o ./output/IntQueueTimer.o ./output/IntSemTest.o ./output/MessageBufferAMP.o ./output/MessageBufferDemo.o ./output/PollQ.o ./output/QPeek.o ./output/QueueOverwrite.o ./output/QueueSet.o ./output/QueueSetPolling.o ./output/recmutex.o ./output/semtest.o ./output/StaticAllocation.o ./output/StreamBufferDemo.o ./output/StreamBufferInterrupt.o ./output/TaskNotify.o ./output/TaskNotifyArray.o ./output/TimerDemo.o ./output/ESAT_Master.o ./output/ESAT_Slave.o ./output/main.o ./output/main_blinky.o ./output/main_full.o ./output/startup_gcc.o ./output/printf-stdarg.o -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/RTOSDemo.out" -MT output/RTOSDemo.out -Xlinker --wrap=malloc -Xlinker --gc-sections -Xlinker -T ./mps2_m3.ld \
+		-Xlinker -Map=./output/RTOSDemo.map -specs=nano.specs \
+		-specs=nosys.specs -specs=rdimon.specs -o ./output/RTOSDemo.out
+arm-none-eabi-size ./output/RTOSDemo.out		
+   text	   data	    bss	    dec	    hex	filename
+  22616	    244	  65678	  88538	  159da	./output/RTOSDemo.out
+14:05:38 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/ESAT_Master.d" -MT output/ESAT_Master.o -c ./ESAT_MasterSlave/ESAT_Master.c -o output/ESAT_Master.o
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/main_blinky.d" -MT output/main_blinky.o -c ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c -o output/main_blinky.o
+./ESAT_MasterSlave/ESAT_Master.c: In function 'ESAT_MasterSM':
+./ESAT_MasterSlave/ESAT_Master.c:129:50: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  129 |     printf( "ESAT_Master report SLAVE ERROR ID: %d \r\n", s_SlaveResponse->u32_operationResult );
+      |                                                 ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                  |                       |
+      |                                                  int                     uint32_t {aka long unsigned int}
+      |                                                 %ld
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c: In function 'prvQueueSendTask':
+./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:195:10: warning: implicit declaration of function 'ESAT_Master'; did you mean 'ESAT_MasterMain'? [-Wimplicit-function-declaration]
+  195 |   (void) ESAT_Master((uint32_t)ulTickCount, &ulValueToSendReceive);
+      |          ^~~~~~~~~~~
+      |          ESAT_MasterMain
+
+
+--- Final linking ---
+
+arm-none-eabi-gcc ./output/tasks.o ./output/list.o ./output/queue.o ./output/timers.o ./output/event_groups.o ./output/stream_buffer.o ./output/heap_4.o ./output/port.o ./output/AbortDelay.o ./output/BlockQ.o ./output/blocktim.o ./output/countsem.o ./output/death.o ./output/dynamic.o ./output/EventGroupsDemo.o ./output/GenQTest.o ./output/integer.o ./output/IntQueue.o ./output/IntQueueTimer.o ./output/IntSemTest.o ./output/MessageBufferAMP.o ./output/MessageBufferDemo.o ./output/PollQ.o ./output/QPeek.o ./output/QueueOverwrite.o ./output/QueueSet.o ./output/QueueSetPolling.o ./output/recmutex.o ./output/semtest.o ./output/StaticAllocation.o ./output/StreamBufferDemo.o ./output/StreamBufferInterrupt.o ./output/TaskNotify.o ./output/TaskNotifyArray.o ./output/TimerDemo.o ./output/ESAT_Master.o ./output/ESAT_Slave.o ./output/main.o ./output/main_blinky.o ./output/main_full.o ./output/startup_gcc.o ./output/printf-stdarg.o -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/RTOSDemo.out" -MT output/RTOSDemo.out -Xlinker --wrap=malloc -Xlinker --gc-sections -Xlinker -T ./mps2_m3.ld \
+		-Xlinker -Map=./output/RTOSDemo.map -specs=nano.specs \
+		-specs=nosys.specs -specs=rdimon.specs -o ./output/RTOSDemo.out
+d:/programs/mingw/gnu_arm_embedded_toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld.exe: ./output/main_blinky.o: in function `prvQueueSendTask':
+D:\workspaces\FreeRTOSv202212.01\FreeRTOS\Demo\CORTEX_MPS2_QEMU_IAR_GCC\build\gcc/./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c:195: undefined reference to `ESAT_Master'
+collect2.exe: error: ld returned 1 exit status
+make: *** [output/RTOSDemo.out] Error 1
+"make -j22 all" terminated with exit code 2. Build might be incomplete.
+14:06:29 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+arm-none-eabi-gcc -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/main_blinky.d" -MT output/main_blinky.o -c ./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c -o output/main_blinky.o
+
+
+--- Final linking ---
+
+arm-none-eabi-gcc ./output/tasks.o ./output/list.o ./output/queue.o ./output/timers.o ./output/event_groups.o ./output/stream_buffer.o ./output/heap_4.o ./output/port.o ./output/AbortDelay.o ./output/BlockQ.o ./output/blocktim.o ./output/countsem.o ./output/death.o ./output/dynamic.o ./output/EventGroupsDemo.o ./output/GenQTest.o ./output/integer.o ./output/IntQueue.o ./output/IntQueueTimer.o ./output/IntSemTest.o ./output/MessageBufferAMP.o ./output/MessageBufferDemo.o ./output/PollQ.o ./output/QPeek.o ./output/QueueOverwrite.o ./output/QueueSet.o ./output/QueueSetPolling.o ./output/recmutex.o ./output/semtest.o ./output/StaticAllocation.o ./output/StreamBufferDemo.o ./output/StreamBufferInterrupt.o ./output/TaskNotify.o ./output/TaskNotifyArray.o ./output/TimerDemo.o ./output/ESAT_Master.o ./output/ESAT_Slave.o ./output/main.o ./output/main_blinky.o ./output/main_full.o ./output/startup_gcc.o ./output/printf-stdarg.o -I./../../../..//Source/include -I./../../../..//Source/portable/GCC/ARM_CM3 -I./../../../..//Demo/Common/include -I./ESAT_MasterSlave -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC -I./../../../..//Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I./ESAT_MasterSlave -nostartfiles -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -g3 -O0 -ffunction-sections -fdata-sections -MMD -MP -MF"output/RTOSDemo.out" -MT output/RTOSDemo.out -Xlinker --wrap=malloc -Xlinker --gc-sections -Xlinker -T ./mps2_m3.ld \
+		-Xlinker -Map=./output/RTOSDemo.map -specs=nano.specs \
+		-specs=nosys.specs -specs=rdimon.specs -o ./output/RTOSDemo.out
+arm-none-eabi-size ./output/RTOSDemo.out		
+   text	   data	    bss	    dec	    hex	filename
+  22696	    244	  65678	  88618	  15a2a	./output/RTOSDemo.out
+14:06:54 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+make: Nothing to be done for `all'.
+23:09:21 **** Incremental Build of configuration Default for project FreeRTOSDemo ****
+make -j22 all 
+make: Nothing to be done for `all'.

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;FreeRTOSDemo/EnduroSat_MasterSlave&apos;" deleteContents="false" description="Delete resource &apos;FreeRTOSDemo/EnduroSat_MasterSlave&apos;" element1="/FreeRTOSDemo/EnduroSat_MasterSlave" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1734356537834"/>
+</session>

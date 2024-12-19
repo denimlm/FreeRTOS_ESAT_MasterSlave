@@ -1,0 +1,5 @@
+#encoding=UTF-8
+#version=1
+org.eclipse.launchbar.core.source,2.5.200.202312281935,file:/C:/Users/mlm1sf/.p2/pool/plugins/org.eclipse.launchbar.core.source_2.5.200.202312281935.jar,-1,false
+org.eclipse.launchbar.ui.controls.source,1.2.400.202401051815,file:/C:/Users/mlm1sf/.p2/pool/plugins/org.eclipse.launchbar.ui.controls.source_1.2.400.202401051815.jar,-1,false
+org.eclipse.launchbar.ui.source,2.5.400.202403071917,file:/C:/Users/mlm1sf/.p2/pool/plugins/org.eclipse.launchbar.ui.source_2.5.400.202403071917.jar,-1,false
