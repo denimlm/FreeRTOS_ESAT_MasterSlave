@@ -11,7 +11,7 @@
 #include <time.h>
 #include "ESAT_Slave.h"
 
-#define ESAT_SLAVE_DIVIDER                  20U
+#define ESAT_SLAVE_DIVIDER                  50U
 #define ESAT_SLAVE_DECREMENT_OP_CONSTANT	10000U
 
 static enum en_SlaveStates SlaveState = S_INIT;
