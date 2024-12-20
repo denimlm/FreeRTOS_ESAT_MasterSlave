@@ -65,12 +65,8 @@ static enum en_MasterStates ESAT_MasterRespond(struct s_MasterRequestData* s_Res
 			if(REQUEST_TGT_RESET == s_Response->en_requestStatus)
 			{
 				printf( "ESAT_Master report Slave reset (INIT) \r\n" );
-				en_UpdateStatus = ERROR;
-				s_Response->en_requestStatus = REQUEST_ERROR;
-			}
-			else
-			{
 				en_UpdateStatus = PROCESSING;
+				s_Response->en_requestStatus = REQUEST_STATUS;
 			}
 		}
 		else if(FAULT == s_Response->en_slaveStatus)

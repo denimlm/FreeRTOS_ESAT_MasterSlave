@@ -142,7 +142,7 @@ uint8_t ESAT_SlaveOperation(struct s_MasterRequestData* ReqOp, void* Op)
 		}
 		else if(REQUEST_TGT_RESET == ReqOp->en_requestStatus)
 		{
-			ReqOp->en_slaveStatus = S_INIT;
+			SlaveState = S_INIT;
 		}
 		else
 		{
@@ -181,6 +181,7 @@ uint8_t ESAT_Slave(uint32_t Trigger, struct s_MasterRequestData* s_RequestOp)
 		{
 		case S_INIT:
 			srand(Trigger);
+			s_RequestOp->en_slaveStatus = SlaveState;
 			SlaveState = ACTIVE;
 		break;
 		case ACTIVE:
