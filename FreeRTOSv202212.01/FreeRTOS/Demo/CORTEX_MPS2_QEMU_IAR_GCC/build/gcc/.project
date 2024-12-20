@@ -61,9 +61,9 @@
 			<locationURI>FREERTOS_ROOT/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c</locationURI>
 		</link>
 		<link>
-			<name>Source/main_blinky.c</name>
+			<name>Source/main_esatms.c</name>
 			<type>1</type>
-			<locationURI>FREERTOS_ROOT/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c</locationURI>
+			<location>D:/workspaces/ESAT/FreeRTOS_ESAT_MasterSlave/FreeRTOSv202212.01/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_esatms.c</location>
 		</link>
 		<link>
 			<name>Source/main_full.c</name>

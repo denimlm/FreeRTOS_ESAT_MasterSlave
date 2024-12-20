@@ -3,267 +3,427 @@ Author: denimlm/Mladenov
 Initial release 0.1v
 Current working directory is /d/workspaces/ESAT/FreeRTOS_ESAT_MasterSlave
 Program start at 
-Thu Dec 19 21:13:13 EEST 2024
+Thu Dec 19 23:07:35 EEST 2024
 #####################################
 QEMU: Simply start program Master/Slave
-ESAT_Master IDLE state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 3 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
+ESAT_Master report Slave is ACTIVE 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 5 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 1501 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
+ESAT_Master report Slave is ACTIVE 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report Slave ERROR ID: 27 
-ESAT_Master report ERROR on Slave site 
-ESAT_Master report SLAVE is in ACTIVE state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 2501 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 30 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 32 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 34 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 36 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 38 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 40 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 43 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 45 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 47 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 49 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 51 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 53 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 55 
+ESAT_Master report Slave is ACTIVE 
 ESAT_Master PROCESSING state 
 ESAT_Master report ERROR on Slave site 
-ESAT_Master report Slave ERROR ID: 173 
+ESAT_Master report Slave reset (INIT) 
 ESAT_Master report ERROR on Slave site 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 59 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 61 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 63 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 65 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 67 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
 ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report Slave ERROR ID: 70 
-ESAT_Master report ERROR on Slave site 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 73 
+ESAT_Master report Slave is ACTIVE 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 9376 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 75 
+ESAT_Master report Slave is ACTIVE 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 10314 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 11251 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 12189 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 13126 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
 ESAT_Master PROCESSING state 
 ESAT_Master report ERROR on Slave site 
-ESAT_Master report Slave ERROR ID: 173 
+ESAT_Master report Slave reset (INIT) 
 ESAT_Master report ERROR on Slave site 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 80 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 82 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report Slave ERROR ID: 89 
-ESAT_Master report ERROR on Slave site 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 92 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 94 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 96 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 98 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 100 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 102 
 ESAT_Master PROCESSING state 
 ESAT_Master report SLAVE is in SLEEP state 
-ESAT_Master IDLE state 
-ESAT_Master report SLAVE is in ACTIVE state 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 21095 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 22033 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 22970 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 23908 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
 ESAT_Master PROCESSING state 
 ESAT_Master report ERROR on Slave site 
-ESAT_Master report Slave ERROR ID: 173 
+ESAT_Master report Slave reset (INIT) 
 ESAT_Master report ERROR on Slave site 
-ESAT_Master report SLAVE is in ACTIVE state 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master report Slave reset (INIT) 
+ESAT_Master report ERROR on Slave site 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 108 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 110 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 112 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
-ESAT_Master report SLAVE operation RESULT= 114 
 ESAT_Master PROCESSING state 
-ESAT_Master report SLAVE is in ACTIVE state 
+ESAT_Master PROCESSING state 
+ESAT_Master report SLAVE is in SLEEP state 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 31876 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 32814 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 33751 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 34689 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 35626 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master report Slave reset (INIT) 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master report SLAVE is in SLEEP state 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 42658 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 43595 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 44533 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 45470 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 46408 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master report Slave reset (INIT) 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master report SLAVE is in SLEEP state 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 54376 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 55314 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 56251 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 57189 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master report Slave reset (INIT) 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master report Slave reset (INIT) 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master report SLAVE is in SLEEP state 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 65158 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 66095 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 67033 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 67970 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 68908 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master report Slave reset (INIT) 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master report SLAVE is in SLEEP state 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 75939 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 76876 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 77814 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 78751 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 79689 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master report Slave reset (INIT) 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master report SLAVE is in SLEEP state 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 87658 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 88595 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 89533 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 90470 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 91408 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master report Slave reset (INIT) 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master report SLAVE is in SLEEP state 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 98439 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 99376 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 100314 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 101251 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 102189 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master report Slave reset (INIT) 
+ESAT_Master report ERROR on Slave site 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master PROCESSING state 
+ESAT_Master report SLAVE is in SLEEP state 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 109220 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 110158 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 111095 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
+ESAT_Master report SLAVE operation RESULT= 112033 
+ESAT_Master PROCESSING state 
+ESAT_Master report Slave is ACTIVE 
 ESAT_Master PROCESSING state 

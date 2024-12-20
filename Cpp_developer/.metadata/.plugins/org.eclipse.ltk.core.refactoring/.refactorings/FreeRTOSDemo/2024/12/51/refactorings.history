@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;FreeRTOSDemo/Source/main_blinky.c&apos; to &apos;main_esatms.c&apos;" description="Rename resource &apos;main_blinky.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Source/main_blinky.c" name="main_esatms.c" stamp="1734640142741" updateReferences="true"/>
-</session>
