@@ -63,7 +63,7 @@
 		<link>
 			<name>Source/main_esatms.c</name>
 			<type>1</type>
-			<location>D:/workspaces/ESAT/FreeRTOS_ESAT_MasterSlave/FreeRTOSv202212.01/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_esatms.c</location>
+			<location>D:/workspaces/FreeRTOS_ESAT_MasterSlave/FreeRTOSv202212.01/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_esatms.c</location>
 		</link>
 		<link>
 			<name>Source/main_full.c</name>

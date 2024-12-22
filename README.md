@@ -1,5 +1,6 @@
 # FreeRTOS_ESAT_MasterSlave
 This is Master/Slave example that work over QEMU simulation and FreeRTOS 
+Project example is realized over Windows host system.
 
 FreeRTOS link for simulation description
 - https://www.freertos.org/Why-FreeRTOS/Quick-connect/qemu-mps2-an385-demo 
